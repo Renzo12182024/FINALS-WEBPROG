@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTERA - Gaming E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span>Sign In | Create an Account | Contact Us</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ASTERA</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button class="search-btn"><i class="ri-search-line"></i></button>
+                </div>
+                <div class="header-icons">
+                    <button class="icon-btn"><i class="ri-account-circle-line"></i></button>
+                    <button class="icon-btn"><i class="ri-heart-line"></i></button>
+                    <button class="icon-btn"><i class="ri-shopping-cart-fill"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><button class="nav-btn" onclick="window.location.href='index.html'">Home</button></li>
+                <li class="nav-dropdown">
+                    <button class="nav-btn">Playstation ▼</button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <h4>PS4 GAMES</h4>
+                            <a href="ps4-games.html" class="dropdown-link">All PS4 Games</a>
+                            <a href="ps4-games.html?genre=Action" class="dropdown-link">Action</a>
+                            <a href="ps4-games.html?genre=Adventure" class="dropdown-link">Adventure</a>
+                            <a href="ps4-games.html?genre=Fighting" class="dropdown-link">Fighting</a>
+                            <a href="ps4-games.html?genre=Racing" class="dropdown-link">Racing</a>
+                            <a href="ps4-games.html?genre=Role Playing" class="dropdown-link">Role Playing</a>
+                            <a href="ps4-games.html?genre=Simulation" class="dropdown-link">Simulation</a>
+                            <a href="ps4-games.html?genre=Shooter" class="dropdown-link">Shooter</a>
+                            <a href="ps4-games.html?genre=Sports" class="dropdown-link">Sports</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>PS5 GAMES</h4>
+                            <a href="ps5-games.html" class="dropdown-link">All PS5 Games</a>
+                            <a href="ps5-games.html?genre=Action" class="dropdown-link">Action</a>
+                            <a href="ps5-games.html?genre=Adventure" class="dropdown-link">Adventure</a>
+                            <a href="ps5-games.html?genre=Fighting" class="dropdown-link">Fighting</a>
+                            <a href="ps5-games.html?genre=Racing" class="dropdown-link">Racing</a>
+                            <a href="ps5-games.html?genre=Role Playing" class="dropdown-link">Role Playing</a>
+                            <a href="ps5-games.html?genre=Strategy" class="dropdown-link">Strategy</a>
+                            <a href="ps5-games.html?genre=Simulation" class="dropdown-link">Simulation</a>
+                            <a href="ps5-games.html?genre=Shooter" class="dropdown-link">Shooter</a>
+                            <a href="ps5-games.html?genre=Sports" class="dropdown-link">Sports</a>
+                        </div>
+                    </div>
+                </li>
+                <li><button class="nav-btn">Xbox ▼</button></li>
+                <li><button class="nav-btn">Nintendo ▼</button></li>
+                <li><button class="nav-btn">Handheld Devices ▼</button></li>
+                <li><button class="nav-btn">Laptops ▼</button></li>
+                <li><button class="nav-btn">Deals</button></li>
+                <li><button class="nav-btn">Coming soon</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slideshow Banner -->
+    <section class="slideshow-section hero-banner">
+        <div class="slideshow-container hero-container">
+            <div class="slide active">
+                <img src="Product Images/hero-shopee-pc-playstation-11-11-power-deals.webp" alt="Slide 1" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="Product Images/BOTW-TOTK.avif" alt="Slide 2" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/1200x400/107c10/ffffff?text=SLIDE+3" alt="Slide 3" class="slide-image">
+            </div>
+        </div>
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">FEATURED PRODUCTS</h2>
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="playstation">Playstation</button>
+                <button class="category-btn" data-category="nintendo">Nintendo</button>
+                <button class="category-btn" data-category="handhelds">Handhelds</button>
+                <button class="category-btn" data-category="laptops">Laptops</button>
+            </div>
+            <div class="products-carousel">
+                <button class="carousel-btn prev" onclick="scrollCarousel('featured-products', -1)">‹</button>
+                <div class="products-container" id="featured-products">
+                    <!-- PlayStation Products -->
+                    <div class="product-card" data-category="playstation" data-product-id="1">
+                        <img src="" alt="">
+                        <h3></h3>
+                        <div class="genre-tags"></div>
+                        <div class="rating"></div>
+                        <p class="price"></p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn"><i class="ri-shopping-cart-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="playstation" data-product-id="2">
+                        <img src="" alt="">
+                        <h3></h3>
+                        <div class="genre-tags"></div>
+                        <div class="rating"></div>
+                        <p class="price"></p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn"><i class="ri-shopping-cart-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="playstation" data-product-id="4">
+                        <img src="" alt="">
+                        <h3></h3>
+                        <div class="genre-tags"></div>
+                        <div class="rating"></div>
+                        <p class="price"></p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn"><i class="ri-shopping-cart-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="playstation" data-product-id="35">
+                        <img src="" alt="">
+                        <h3></h3>
+                        <div class="genre-tags"></div>
+                        <div class="rating"></div>
+                        <p class="price"></p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn"><i class="ri-shopping-cart-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="playstation" data-product-id="5" data-tags="action,co-op,hunting,multiplayer">
+                        <img src="Product Images/Playstation/PS5/ps5-dragonball-sparking-zero-r2-cover_1.jpg" alt="Monster Hunter Wilds">
+                        <h3>Monster Hunter Wilds</h3>
+                        <div class="genre-tags">
+                            <span class="tag">Fighting</span>
+                            <span class="tag">Multiplayer</span>
+                        </div>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,995.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="playstation" data-product-id="1" data-tags="action,western,open-world,mature">
+                        <img src="Product Images/Playstation/PS5/assassins-creed-shadows-special-edition_1_1_2.jpg" alt="Red Dead Redemption II">
+                        <h3>Assassin's Creed Shadows</h3>
+                        <div class="genre-tags">
+                            <span class="tag">Action</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱1,550.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Nintendo Products -->
+                    <div class="product-card" data-category="nintendo" data-product-id="80">
+                        <img src="" alt="">
+                        <h3></h3>
+                        <div class="genre-tags"></div>
+                        <div class="rating"></div>
+                        <p class="price"></p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn"><i class="ri-shopping-cart-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="nintendo">
+                        <img src="https://via.placeholder.com/200x250/00a651/ffffff?text=Zelda+TOTK" alt="Zelda">
+                        <h3>Zelda: Tears of the Kingdom</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,150.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="nintendo">
+                        <img src="https://via.placeholder.com/200x250/ff6b6b/ffffff?text=Super+Smash+Bros" alt="Smash Bros">
+                        <h3>Super Smash Bros Ultimate</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,995.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="nintendo">
+                        <img src="https://via.placeholder.com/200x250/ffd700/000000?text=Pokemon+Scarlet" alt="Pokemon">
+                        <h3>Pokemon Scarlet</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,650.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="nintendo">
+                        <img src="https://via.placeholder.com/200x250/ff1493/ffffff?text=Splatoon+3" alt="Splatoon">
+                        <h3>Splatoon 3</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,850.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+
+                    <!-- Handhelds Products -->
+                    <div class="product-card" data-category="handhelds">
+                        <img src="https://via.placeholder.com/200x250/1a1a1a/ffffff?text=Steam+Deck+OLED" alt="Steam Deck">
+                        <h3>Steam Deck OLED 1TB</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱34,850.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="handhelds">
+                        <img src="https://via.placeholder.com/200x250/ff6b00/ffffff?text=ROG+Ally" alt="ROG Ally">
+                        <h3>ASUS ROG Ally</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱32,995.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="handhelds">
+                        <img src="https://via.placeholder.com/200x250/000000/ffffff?text=Legion+Go" alt="Legion Go">
+                        <h3>Lenovo Legion Go</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱38,500.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="handhelds">
+                        <img src="https://via.placeholder.com/200x250/e60012/ffffff?text=Nintendo+Switch+OLED" alt="Switch OLED">
+                        <h3>Nintendo Switch OLED</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱19,995.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+
+                    <!-- Laptops Products -->
+                    <div class="product-card" data-category="laptops">
+                        <img src="https://via.placeholder.com/200x250/00ff00/000000?text=Razer+Blade+15" alt="Razer Blade">
+                        <h3>Razer Blade 15</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱125,000.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <img src="https://via.placeholder.com/200x250/ff0000/ffffff?text=MSI+Titan" alt="MSI Titan">
+                        <h3>MSI Titan GT77</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱185,000.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <img src="https://via.placeholder.com/200x250/ff6600/ffffff?text=ROG+Strix" alt="ROG Strix">
+                        <h3>ASUS ROG Strix Scar 17</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱145,000.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="laptops">
+                        <img src="https://via.placeholder.com/200x250/0066cc/ffffff?text=Alienware+M18" alt="Alienware">
+                        <h3>Alienware M18</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱165,000.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('featured-products', 1)">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">NEW ARRIVALS</h2>
+            <div class="products-carousel">
+                <button class="carousel-btn prev" onclick="scrollCarousel('new-arrivals', -1)">‹</button>
+                <div class="products-container" id="new-arrivals">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/cc0000/ffffff?text=Arcade+Warriors+Age+of+Darkness" alt="Arcade Warriors">
+                        <h3>Arcade Warriors: Age of...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,995.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/e60012/ffffff?text=Borderlands+4" alt="Borderlands 4">
+                        <h3>Borderlands 4</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱4,190.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/0066cc/ffffff?text=The+Outer+Worlds+2" alt="Outer Worlds 2">
+                        <h3>The Outer Worlds 2</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,495.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/87ceeb/ffffff?text=Harvest+Moon+Home+Sweet+Home" alt="Harvest Moon">
+                        <h3>Harvest Moon: Home Sweet...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,150.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/1e3a8a/ffffff?text=Persona+3+Reload" alt="Persona 3">
+                        <h3>Persona 3 Reload</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,399.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/ff4500/ffffff?text=Dragon+Ball+Sparking+Zero" alt="Dragon Ball">
+                        <h3>Dragon Ball: Sparking! Zero</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,750.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('new-arrivals', 1)">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nintendo Banner Slideshow -->
+    <section class="slideshow-section nintendo-banner">
+        <div class="slideshow-container nintendo-container">
+            <div class="slide active">
+                <img src="Product Images/2x1_NSwitch2_HWKeyvisual.jpg" alt="Slide 1" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/1200x400/0070cc/ffffff?text=SLIDE+2" alt="Slide 2" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/1200x400/107c10/ffffff?text=SLIDE+3" alt="Slide 3" class="slide-image">
+            </div>
+        </div>
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide2(1)"></span>
+            <span class="dot" onclick="currentSlide2(2)"></span>
+            <span class="dot" onclick="currentSlide2(3)"></span>
+        </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">POPULAR PRODUCTS</h2>
+            <div class="products-carousel">
+                <button class="carousel-btn prev" onclick="scrollCarousel('popular', -1)">‹</button>
+                <div class="products-container" id="popular">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/e60012/ffffff?text=Nintendo+Switch+2" alt="Nintendo Switch 2">
+                        <h3>Nintendo Switch 2</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱28,750.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/003087/ffffff?text=Ghost+of+Yotei" alt="Ghost of Yotei">
+                        <h3>Ghost of Yotei</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,490.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/1a1a1a/ffffff?text=Steam+Deck+OLED+1TB+Handheld" alt="Steam Deck">
+                        <h3>Steam Deck OLED 1TB Han...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱34,850.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/8b0000/ffffff?text=Pokémon+Legends+Z-A" alt="Pokemon Legends">
+                        <h3>Pokémon Legends Z-A</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,595.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/4169e1/ffffff?text=Battlefield+7" alt="Battlefield 7">
+                        <h3>Battlefield 7</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,650.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/006400/ffffff?text=GTA+VI" alt="GTA VI">
+                        <h3>Grand Theft Auto VI</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱4,299.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('popular', 1)">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="coming-soon-section">
+        <div class="container">
+            <h2 class="section-title coming-soon-title">COMING SOON</h2>
+            <div class="products-carousel">
+                <button class="carousel-btn prev" onclick="scrollCarousel('coming-soon', -1)">‹</button>
+                <div class="products-container" id="coming-soon">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/8b0000/ffffff?text=Dragon+Age+Veilguard" alt="Dragon Age">
+                        <h3>[PRE-ORDER] Dragon Age V...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,500.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/003087/ffffff?text=Crysis+Remastered" alt="Crysis">
+                        <h3>[PRE-ORDER] Crysis Rem...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,500.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/ff1493/ffffff?text=Metroid+Prime+4" alt="Metroid">
+                        <h3>[PRE-ORDER] Metroid P...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱2,900.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/e60012/ffffff?text=Nameless+The+Hackers" alt="Nameless">
+                        <h3>[PRE-ORDER] Nameless: T...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,400.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/0070cc/ffffff?text=Onimusha+Genma" alt="Onimusha">
+                        <h3>[PRE-ORDER] Onimusha: G...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,600.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/1a1a1a/ffffff?text=Death+Stranding+2" alt="Death Stranding">
+                        <h3>[PRE-ORDER] Death Strand...</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,999.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x250/4169e1/ffffff?text=Fable+4" alt="Fable">
+                        <h3>[PRE-ORDER] Fable 4</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="price">₱3,200.00</p>
+                        <div class="button-container">
+                            <button class="buy-btn">BUY NOW</button>
+                            <button class="cart-icon-btn">🛒</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel('coming-soon', 1)">›</button>
+            </div>
+            <div class="view-all-container">
+                <button class="view-all-btn">VIEW ALL COMING SOON →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CALL US NOW:</h3>
+                    <p>+63923 452 9021</p>
+                    <p>+63923 452 9021</p>
+                    <p class="footer-hours">Weekday Days | Hours:</p>
+                    <p>Mon - Sat | 8AM - 4PM</p>
+                </div>
+                <div class="footer-column">
+                    <h3>EMAIL ADDRESS:</h3>
+                    <p>support@astera.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>FOLLOW US:</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-tiktok-line"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shopping Cart</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>&nbsp;</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Request</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© Astera eCommerce 2025. All Rights Reserved</p>
+                    <div class="payment-methods">
+                        <span class="payment-icon">💳 VISA</span>
+                        <span class="payment-icon">💳 MC</span>
+                        <span class="payment-icon">💳 AMEX</span>
+                        <span class="payment-icon">💳 GCASH</span>
+                        <span class="payment-icon">💳 MAYA</span>
+                        <span class="payment-icon">💳 COD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
